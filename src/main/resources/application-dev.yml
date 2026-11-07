@@ -5,7 +5,7 @@ spring:
       name: admin
       password: admin123
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5434}/${DB_NAME:docReader}
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5434}/${DB_NAME:grounded_doc}
     username: ${DB_USER:postgres}
     password: ${DB_PASSWORD:zxcvbnmn}
 

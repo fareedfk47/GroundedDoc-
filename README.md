@@ -54,7 +54,7 @@ Start PostgreSQL with `pgvector` using Docker Compose:
 docker compose up -d
 ```
 
-This starts PostgreSQL on port `5434` with the database `docReader` and the `vector` extension pre-installed.
+This starts PostgreSQL on port `5434` with the database `grounded_doc` and the `vector` extension pre-installed.
 
 ### 2. Configure Environment Variables
 
