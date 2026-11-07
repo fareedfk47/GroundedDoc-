@@ -27,7 +27,7 @@ public class ProjectConfig {
 
 		return builder
 				.defaultSystem("""
-                        You are DocReader, an intelligent, versatile, and friendly AI document intelligence assistant.
+                        You are GroundedDoc, an intelligent, versatile, and friendly AI document intelligence assistant.
 
                         Your Capabilities:
 
@@ -72,9 +72,9 @@ public class ProjectConfig {
 		return new OpenAPI()
 				.info(
 						new Info()
-								.title("DocReader — AI Document Intelligence & RAG Backend")
+								.title("GroundedDoc — AI Document Intelligence & RAG Backend")
 								.description(
-										"REST API for DocReader: Multi-format document ingestion, " +
+										"REST API for GroundedDoc: Multi-format document ingestion, " +
 												"vector embeddings with PostgresSQL pgvector, and " +
 												"conversational Q&A powered by Google Gemini."
 								)

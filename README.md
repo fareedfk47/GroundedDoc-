@@ -1,6 +1,6 @@
-# DocReader — AI Document Intelligence & RAG Backend
+# GroundedDoc — AI Document Intelligence & RAG Backend
 
-DocReader is a production-ready, Spring Boot backend for multi-format document ingestion, vector embeddings, similarity search with PostgreSQL `pgvector`, and conversational Question & Answering powered by **Google Gemini** and **Spring AI**.
+GroundedDoc is a production-ready, Spring Boot backend for multi-format document ingestion, vector embeddings, similarity search with PostgreSQL `pgvector`, and conversational Question & Answering powered by **Google Gemini** and **Spring AI**.
 
 ---
 
