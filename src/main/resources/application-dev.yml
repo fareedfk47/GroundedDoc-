@@ -1,0 +1,80 @@
+# Database configurations
+spring:
+  security:
+    user:
+      name: admin
+      password: admin123
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5434}/${DB_NAME:docReader}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:zxcvbnmn}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  # Google Gemini configurations
+  ai:
+    google:
+      genai:
+        api-key: ${GEMINI_API_KEY:demo-key}
+        chat:
+          options:
+            model: ${GEMINI_CHAT_MODEL:gemini-2.5-flash}
+            temperature: 0.2
+        embedding:
+          api-key: ${GEMINI_API_KEY:demo-key}
+          text:
+            options:
+              model: ${GEMINI_EMBEDDING_MODEL:text-embedding-004}
+              task-type: RETRIEVAL_DOCUMENT
+              dimensions: 768
+
+    # PgVector configurations
+    vectorstore:
+      pgvector:
+        index-type: HNSW
+        distance-type: COSINE_DISTANCE
+        dimensions: 768
+        table-name: vector_store
+        schema-name: public
+        initialize-schema: true
+
+  servlet:
+    multipart:
+      max-file-size: 25MB
+      max-request-size: 50MB
+
+# Application configurations
+app:
+  rag:
+    chunk-size: 700
+    chunk-overlap: 100
+    top-k: 5
+    similarity-threshold: 0.0
+
+  cors:
+    allowed-origins: "*"
+    allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+    allowed-headers: "*"
+
+# JWT configurations
+jwt:
+  secret: ${JWT_SECRET:404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970}
+  expiration: 3600000
+
+bootui:
+  enabled: true
+
+logging:
+  level:
+    org:
+      springframework:
+        ai:
+          chat:
+            client:
+              advisor: DEBUG
